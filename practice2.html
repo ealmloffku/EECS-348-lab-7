@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script>
+	function onInput() {
+		let paragraph = document.getElementById("paragraph1");
+		
+		let borderRed = document.getElementById("redInput").value;
+		let borderGreen = document.getElementById("greenInput").value;
+		let borderBlue = document.getElementById("blueInput").value;
+		
+		paragraph.style.borderColor = `rgb(${borderRed}, ${borderGreen}, ${borderBlue})`;
+
+		let backgroundRed = document.getElementById("redBgInput").value;
+                let backgroundGreen = document.getElementById("greenBgInput").value;
+                let backgroundBlue = document.getElementById("blueBgInput").value;
+
+                paragraph.style.backgroundColor = `rgb(${backgroundRed}, ${backgroundGreen}, ${backgroundBlue})`;
+
+		let borderWidth = document.getElementById("borderWidthInput").value;
+
+                paragraph.style.borderWidth = `${borderWidth}px`;
+	}
+</script>
+<body>
+
+<div>
+ <p id="paragraph1" style="border-style:solid; border-width:1px">This is a paragraph of text</p>
+ <div style="display:flex;flex:row">
+	 Border Red (0-255)
+	 <input type="number" value="0" id="redInput" oninput="onInput()"></input>
+ </div>
+ <div style="display:flex;flex:row">
+         Border Green (0-255)
+         <input type="number" value="0" id="greenInput" oninput="onInput()"></input>
+ </div>
+ <div style="display:flex;flex:row">
+         Border Blue (0-255)
+         <input type="number" value="0" id="blueInput" oninput="onInput()"></input>
+ </div>
+<div style="display:flex;flex:row">
+         Background Red (0-255)
+         <input type="number" value="0" id="redBgInput" oninput="onInput()"></input>
+ </div>
+<div style="display:flex;flex:row">
+         Background Green (0-255)
+         <input type="number" value="0" id="greenBgInput" oninput="onInput()"></input>
+ </div>
+<div style="display:flex;flex:row">
+         Background Blue (0-255)
+         <input type="number" value="0" id="blueBgInput" oninput="onInput()"></input>
+ </div>
+ <div style="display:flex;flex:row">
+         Border Width
+         <input type="number" value="0" id="borderWidthInput" oninput="onInput()"></input>
+ </div>
+
+
+</div>
+
+</body>
+</html> 
